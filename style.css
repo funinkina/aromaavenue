@@ -1,0 +1,187 @@
+:root{
+    --accent: #b899a8;
+    --shadow: #8f98b3;
+}
+*{
+    margin: 0;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5vmin 0 5vmin;
+}
+.header > img{
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.header > img:hover{
+    filter: invert(72%) sepia(6%) saturate(1112%) hue-rotate(279deg) brightness(92%) contrast(76%);
+}
+a{
+    color: black;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+#menu{
+    font-size: 1.7vmax;
+    font-family: 'Quicksand', 'sans-serif';
+    font-weight: 100;
+    border: 2px solid black;
+    border-radius: 50px;
+    padding: 3px 20px 3px 20px;
+    transition: all 0.3s ease-in-out;
+}
+#menu:hover{
+    cursor: pointer;
+    color: var(--accent);
+    border-color: var(--accent);
+    -webkit-box-shadow: 0px 0px 25px 0px rgba(191,149,170,1);
+    -moz-box-shadow: 0px 0px 25px 0px rgba(191,149,170,1);
+    box-shadow: 0px 0px 25px 0px rgba(191,149,170,1);
+}
+.logo{
+    font-family: 'Bebas Neue', cursive;
+    flex-grow: 1;
+    text-align: center;
+    font-size: 7vw;
+    color: var(--accent);
+    margin: 0;
+    transition: all 0.3s cubic-bezier(.79,.14,.15,.86);
+    letter-spacing: 10px;
+}
+.logo:hover{
+    letter-spacing: 20px;
+}
+#menu > img{
+    width: 1.3vmax;
+    padding-right: 10px;
+    transition: all 0.3s ease-in-out;
+}
+#menu:hover > img{
+    filter: invert(72%) sepia(6%) saturate(1112%) hue-rotate(279deg) brightness(92%) contrast(76%);
+}
+#user{
+    border-radius: 50%;
+    height: 2.5vmax;
+    border: 2px solid black;
+    margin-right: 30px;
+}
+#user:hover{
+    cursor: pointer;
+    border-color: var(--accent);
+    filter: none;
+    -webkit-box-shadow: 0px 0px 25px 0px rgba(191,149,170,1);
+    -moz-box-shadow: 0px 0px 25px 0px rgba(191,149,170,1);
+    box-shadow: 0px 0px 25px 0px rgba(191,149,170,1);
+}
+.bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 3vmin;
+    padding-bottom: 3vmin;
+    margin-left: calc(15vw+10vh);
+    margin-bottom: 3vmin;
+}
+.search{
+    width: 40vw;
+    height: 2.5vmax;
+    background-color: rgb(241, 241, 241);
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+    font-size: 1.3vmax;
+    border: 2px solid black;
+    border-radius: 50px;
+    padding: 5px 0 5px 30px;
+    background-image: url(https://icons.iconarchive.com/icons/praveen/minimal-outline/512/search-icon.png);
+    background-size: 2vmax;
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-position: 98%;
+    transition: all 0.3s ease-in;
+}
+.search:focus{
+    border: 2px solid var(--accent) ;
+    outline: none;
+    -webkit-box-shadow: 0px 0px 25px 0px rgba(191,149,170,1);
+    -moz-box-shadow: 0px 0px 25px 0px rgba(191,149,170,1);
+    box-shadow: 0px 0px 25px 0px rgba(191,149,170,1);
+}
+.help{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'Quicksand', 'sans-serif';
+    background-color: black;
+    color: white;
+    font-size: 1vmax;
+    margin: 1.7vi;
+    padding: 7px 15px 7px 18px;
+    border-radius: 50px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    transition: all 0.3s ease;
+}
+.help:hover{
+    background-color: var(--accent);
+    cursor: pointer;
+    -webkit-box-shadow: 0px 0px 25px 0px rgba(191,149,170,1);
+    -moz-box-shadow: 0px 0px 25px 0px rgba(191,149,170,1);
+    box-shadow: 0px 0px 25px 0px rgba(191,149,170,1);
+}
+.help > img{
+    width: 1.85vmin;
+    height: 1.85vmin;
+    filter: invert(1);
+    padding-right: 10px;
+}
+.products{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.products > img{
+    width: 98vw;
+    margin-bottom: 1vw;
+}
+
+@media (max-width: 768px){
+    .logo{
+        font-size: 10vw;
+        letter-spacing: normal;
+        transition: none;
+    }
+    .logo:hover{
+        letter-spacing: normal;
+    }
+    #user{
+        margin-right: 10px;
+    }
+    #menu{
+        padding: 5px;
+        font-size: 0;
+    }
+    #menu > img{
+        width: 5vw;
+        padding: 0 8px 0 8px;
+    }
+    .search{
+        width: 85vw;
+        font-size: 4vw;
+    }
+    .help{
+        padding: 0;
+    }
+    .help > img{
+        width: 3vmax;
+        height: 3vmax;
+        padding: 20px;
+    }
+    .help > p{
+        display: none;
+    }
+}
