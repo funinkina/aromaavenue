@@ -151,6 +151,7 @@ a{
 
 @media (max-width: 768px){
     .logo{
+        padding-top: 10px;
         font-size: 10vw;
         letter-spacing: normal;
         transition: none;
@@ -159,6 +160,8 @@ a{
         letter-spacing: normal;
     }
     #user{
+        width: 7vw;
+        height: 7vw;
         margin-right: 10px;
     }
     #menu{
@@ -175,6 +178,7 @@ a{
     }
     .help{
         padding: 0;
+        margin: 5vi;
     }
     .help > img{
         width: 3vmax;
