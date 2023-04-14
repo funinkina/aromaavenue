@@ -326,7 +326,12 @@ footer{
         font-size: 4vw;
     }
     a.button{
+        display: flex;
+        justify-content: center;
         font-size: 2.5vmax;
+    }
+    .dropdown ul{
+        left: 20%;
     }
     .dropdown ul li{
         font-size: 2vmax;
