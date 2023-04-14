@@ -32,7 +32,7 @@ a{
     border-radius: 50px;
     padding: 5px 20px 5px 20px;
     transition: all 0.3s ease-in-out;
-    background-color: black;
+    background-color: rgb(60, 60, 60);
     color: white;
 }
 #menu:hover{
@@ -48,7 +48,7 @@ a{
 #menu > img{
     filter: invert(1);
     width: 1.3vmax;
-    padding-right: 10px;
+    padding-right: 15px;
     transition: all 0.3s ease-in-out;
 }
 .logo{
@@ -132,7 +132,7 @@ a{
     flex-direction: row;
     align-items: center;
     font-family: 'Quicksand', sans-serif;
-    background-color: black;
+    background-color: rgb(60, 60, 60);
     color: white;
     font-size: 1.5vmax;
     margin: 1.7vi;
@@ -159,12 +159,13 @@ a{
 }
 .products{
     border-top: 2px solid black;
+    border-bottom: 2px solid black;
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 .products > img{
-    width: 98vw;
+    width: 99svw;
     margin-bottom: 1vw;
 }
 .filters{
@@ -182,11 +183,11 @@ a.button > img{
 a.button {
   /* Frame */
   display: flex;
-  padding: 20px 28px;
+  padding: 13px 25px;
   border-radius: 60px;
   box-sizing: border-box;
   border: none;
-  background: black;
+  background: rgb(60, 60, 60);
   color: white;
   font-size: 1.4vmax;
   cursor: pointer;
@@ -279,6 +280,18 @@ a.button:hover{
     left: 0;
     bottom: 0;
     z-index: 1;
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Quicksand', sans-serif;
+    padding: 10px 0 10px 0;
+    font-size: 15px;
+    background-color: var(--accent);
+    bottom: 0;
+    color: black;
 }
 @media (max-width: 768px){
     .logo{
