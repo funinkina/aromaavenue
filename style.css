@@ -32,7 +32,7 @@ a{
     font-family: 'Quicksand', sans-serif;
     font-weight: 100;
     border-radius: 50px;
-    padding: 5px 20px 5px 20px;
+    padding: 10px 20px 10px 20px;
     transition: all 0.3s ease-in-out;
     background-color: rgb(60, 60, 60);
     color: white;
@@ -62,16 +62,17 @@ a{
     color: var(--accent);
     margin: 0;
     transition: all 0.3s cubic-bezier(.79,.14,.15,.86);
-    letter-spacing: 10px;
+    animation: cometoge 0.6s linear forwards;
 }
-.logo:hover{
-    letter-spacing: 20px;
+@keyframes cometoge {
+    from{letter-spacing: 70px;}
+    to {letter-spacing: 8px;}
 }
 .subtitle{
     font-family: 'Bebas Neue', cursive;
     width: 100%;
     flex-basis: 100%;
-    color: var(--accent);
+    color: rgb(60, 60, 60);
     margin: 0;
     display: flex;
     justify-content: center;
@@ -98,7 +99,11 @@ a{
     box-shadow: 0px 0px 25px 0px rgba(191,149,170,1);
 }
 #bag{
-    width: 3vw;
+    width: 2.8vw;
+    filter: invert(13%) sepia(0%) saturate(3513%) hue-rotate(316deg) brightness(105%) contrast(73%);
+}
+#bag:hover{
+   filter: invert(72%) sepia(6%) saturate(1112%) hue-rotate(279deg) brightness(92%) contrast(76%); 
 }
 .bar{
     display: flex;
@@ -115,10 +120,9 @@ a{
     height: 2.5vmax;
     background-color: #ffdbf6;
     font-family: 'Quicksand', sans-serif;
+    border: 2px solid rgb(60, 60, 60);
     font-weight: 300;
     font-size: 1.3vmax;
-    outline: none;
-    border: none;
     border-radius: 50px;
     padding: 5px 0 5px 30px;
     background-image: url(https://icons.iconarchive.com/icons/praveen/minimal-outline/512/search-icon.png);
@@ -165,6 +169,36 @@ a{
     filter: invert(1);
     padding-right: 10px;
 }
+.info{
+    font-family: 'Bebas Neue', cursive;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 7vh;
+    cursor: default;
+}
+.info > *{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.info h1{
+    font-size: 10vw;
+	background: radial-gradient(circle, rgba(255,219,246,1) 0%, rgba(184,153,168,1) 60%);
+    background-size: 200% auto;
+    letter-spacing: 1px;
+    background-clip: text;
+    animation: move 5s linear infinite;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.info p{
+    font-size: 2vmax;
+    font-family: 'Quicksand';
+    font-weight: 700;
+}
+@keyframes move { to { background-position: 200% center; } }
 .products{
     border-top: 2px solid black;
     border-bottom: 2px solid black;
@@ -177,6 +211,9 @@ a{
     margin-bottom: 1vw;
 }
 .filters{
+    border-top: 2px solid rgb(60, 60, 60);
+    border-bottom: 2px solid rgb(60, 60, 60);
+    padding: 1vh 0 1vh 0;
     font-family: 'Quicksand', sans-serif;
     display: flex;
     flex-direction: row;
@@ -191,7 +228,6 @@ a{
 #arrow{
     width: 1.5vmax;
     filter: invert(1);
-    padding-left: 10px;
     transition: all 0.3s ease-in-out;
 }
 a.button {
@@ -239,7 +275,6 @@ a.button:hover{
 
 .dropdown summary:focus a.button {
     border-radius: 25px 25px 0 0;
-    border-bottom: 0;
     border-color: #ffdbf6;
     background-color: var(--accent);
     -webkit-box-shadow: 0px 0px 25px 0px rgba(191,149,170,1);
@@ -250,10 +285,11 @@ a.button:hover{
     transform: scaleY(-1);
 }
 .dropdown summary:focus {
-  outline: none;
+    outline: none;
 }
 
 .dropdown ul {
+    border-top: 1px solid #7e5a71;
   position: absolute;
   padding: 5px 0 15px 0;
   width: 23vh;
@@ -293,7 +329,6 @@ a.button:hover{
 
 .dropdown ul li a:hover {
   background-color: #7e5a71;
-  color: white;
 }
 .dropdown > summary::before {
   display: none;
