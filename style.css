@@ -26,7 +26,9 @@ a{
     transition: all 0.2s ease-in-out;
 }
 #menu{
-    font-size: 1.7vmax;
+    display: flex;
+    align-items: center;
+    font-size: 1.4vmax;
     font-family: 'Quicksand', sans-serif;
     font-weight: 100;
     border-radius: 50px;
@@ -52,6 +54,7 @@ a{
     transition: all 0.3s ease-in-out;
 }
 .logo{
+    cursor: default;
     font-family: 'Bebas Neue', cursive;
     flex-grow: 1;
     text-align: center;
@@ -75,14 +78,15 @@ a{
     font-size: 2vw;
     letter-spacing: 5px;
     transition: all 0.3s ease-in-out;
+    cursor: default;
 }
 .subtitle:hover{
     letter-spacing: 1px;
 }
 #user{
     border-radius: 50%;
-    height: 2.5vmax;
-    border: 2px solid black;
+    height: 2.8vmax;
+    border: 2px solid rgb(60, 60, 60);
     margin-right: 30px;
 }
 #user:hover{
@@ -92,6 +96,9 @@ a{
     -webkit-box-shadow: 0px 0px 25px 0px rgba(191,149,170,1);
     -moz-box-shadow: 0px 0px 25px 0px rgba(191,149,170,1);
     box-shadow: 0px 0px 25px 0px rgba(191,149,170,1);
+}
+#bag{
+    width: 3vw;
 }
 .bar{
     display: flex;
@@ -133,10 +140,11 @@ a{
     align-items: center;
     font-family: 'Quicksand', sans-serif;
     background-color: rgb(60, 60, 60);
+    border: 1px solid rgb(60, 60, 60);
     color: white;
     font-size: 1.5vmax;
     margin: 1.7vi;
-    padding: 10px 20px 10px 20px;
+    padding: 10px 23px 10px 23px;
     border-radius: 50px;
     position: fixed;
     bottom: 0;
@@ -152,8 +160,8 @@ a{
     box-shadow: 0px 0px 25px 0px rgba(191,149,170,1);
 }
 .help > img{
-    width: 2.3vmin;
-    height: 2.3vmin;
+    width: 2.5vmin;
+    height: 2.5vmin;
     filter: invert(1);
     padding-right: 10px;
 }
@@ -175,26 +183,34 @@ a{
     justify-content: space-evenly;
     margin-bottom: 5vh;
 }
-a.button > img{
+#icon{
+    filter: invert(1);
+    width: 1.5vmax;
+    align-self: flex-start;
+}
+#arrow{
     width: 1.5vmax;
     filter: invert(1);
     padding-left: 10px;
+    transition: all 0.3s ease-in-out;
 }
 a.button {
-  /* Frame */
+  width: 15vw;
   display: flex;
-  padding: 13px 25px;
-  border-radius: 60px;
+  justify-content: space-between;
+  padding: 10px 15px;
+  border-radius: 25px;
   box-sizing: border-box;
   border: none;
   background: rgb(60, 60, 60);
   color: white;
-  font-size: 1.4vmax;
+  font-size: 1.2vmax;
   cursor: pointer;
-  border: 1px solid #ffdbf6;
+  border: 1px solid rgb(60, 60, 60);
   transition: all 0.3s ease-in-out;
 }
 a.button:hover{
+    border-color: #ffdbf6;
     background-color: var(--accent);
     -webkit-box-shadow: 0px 0px 25px 0px rgba(191,149,170,1);
     -moz-box-shadow: 0px 0px 25px 0px rgba(191,149,170,1);
@@ -222,35 +238,46 @@ a.button:hover{
 }
 
 .dropdown summary:focus a.button {
+    border-radius: 25px 25px 0 0;
+    border-bottom: 0;
+    border-color: #ffdbf6;
     background-color: var(--accent);
     -webkit-box-shadow: 0px 0px 25px 0px rgba(191,149,170,1);
     -moz-box-shadow: 0px 0px 25px 0px rgba(191,149,170,1);
     box-shadow: 0px 0px 25px 0px rgba(191,149,170,1); 
 }
-
+.dropdown summary:focus a.button #arrow{
+    transform: scaleY(-1);
+}
 .dropdown summary:focus {
   outline: none;
 }
 
 .dropdown ul {
   position: absolute;
-  padding: 20px 0;
+  padding: 5px 0 15px 0;
   width: 23vh;
   left: 0;
-  margin-top: 10px;
+  top: 80%;
+  width: 15vw;
+  margin-top: 5px;
   margin-left: calc((var(20vh) / 2)  * -1);
   box-sizing: border-box;
   z-index: 2;
-  background: rgb(143, 115, 143);
-  border-radius: 25px;
+  background: var(--accent);
+  border-radius: 0 0 25px 25px;
+  border: 1px solid #ffdbf6 ;
+  border-top: 0;
   list-style: none;
+  overflow: hidden;
   -webkit-box-shadow: 0px 0px 25px 0px rgba(191,149,170,1);
   -moz-box-shadow: 0px 0px 25px 0px rgba(191,149,170,1);
   box-shadow: 0px 0px 25px 0px rgba(191,149,170,1);
 }
 
 .dropdown ul li {
-    font-size: 1.2vw;
+    border-bottom: 1px solid #7e5a71;
+    font-size: 1.2vmax;
     padding: 0;
     margin: 0;
 }
@@ -265,7 +292,7 @@ a.button:hover{
 }
 
 .dropdown ul li a:hover {
-  background-color: #680044;
+  background-color: #7e5a71;
   color: white;
 }
 .dropdown > summary::before {
@@ -312,35 +339,43 @@ footer{
         height: 7vw;
         margin-right: 10px;
     }
+    #bag{
+        width: 7vw;
+    }
     #menu{
         padding: 5px;
         font-size: 0;
     }
     #menu > img{
-        width: 5vw;
-        padding: 0 8px 0 8px;
+        width: 4vw;
+        padding: 5px 13px;
     }
     .search{
         height: 7vw;
         width: 80vw;
         font-size: 4vw;
     }
+    .filters{
+        margin-bottom: 5vw;
+    }
     a.button{
+        width: 80vw;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         font-size: 2.5vmax;
     }
+    #arrow, #icon{
+        width: 3vmax;
+        height: 3vmax;
+    }
     .dropdown ul{
-        left: 20%;
+        left: 0;
+        width: 80vw;
+        border-radius: 0 0 25px 25px;
+        border-top: 0;
     }
     .dropdown ul li{
         font-size: 2vmax;
-    }
-    a.button > img{
-        width: 3vmax;
-        height: 3vmax;
-        filter: invert(1);
-        padding-left: 10px;
     }
     .filters{
         justify-content: center;
